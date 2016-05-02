@@ -6,11 +6,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     private Button buttonLoad;
+    private EditText phoneBox;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
                 SMSTask task = new SMSTask();
                 task.execute();
             }});
+
+        phoneBox = (EditText)findViewById(R.id.phonebox);
     }
 
     public class SMSTask extends AsyncTask<Void, Void, Void> {
