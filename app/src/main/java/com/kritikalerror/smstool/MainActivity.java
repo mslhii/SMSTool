@@ -11,24 +11,36 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button buttonLoad;
-    private EditText phoneBox;
+    protected String mPhoneNumber;
+    protected String mTextContents;
+    protected int mReps;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        buttonLoad = (Button)findViewById(R.id.start);
+        mReps = 0;
+        mPhoneNumber = "";
+        mTextContents = "";
+
+        final EditText phoneBox = (EditText)findViewById(R.id.phonebox);
+        final EditText textBox = (EditText)findViewById(R.id.phonebox);
+        final EditText repBox = (EditText)findViewById(R.id.phonebox);
+
+        Button buttonLoad = (Button)findViewById(R.id.start);
         buttonLoad.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View arg0) {
+                mPhoneNumber = phoneBox.getText().toString();
+                mReps = Integer.getInteger(repBox.getText().toString());
+                mTextContents = textBox.getText().toString();
                 SMSTask task = new SMSTask();
                 task.execute();
             }});
 
-        phoneBox = (EditText)findViewById(R.id.phonebox);
     }
 
     public class SMSTask extends AsyncTask<Void, Void, Void> {
