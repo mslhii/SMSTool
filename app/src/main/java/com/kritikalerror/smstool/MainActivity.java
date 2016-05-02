@@ -26,8 +26,8 @@ public class MainActivity extends AppCompatActivity {
         mTextContents = "";
 
         final EditText phoneBox = (EditText)findViewById(R.id.phonebox);
-        final EditText textBox = (EditText)findViewById(R.id.phonebox);
-        final EditText repBox = (EditText)findViewById(R.id.phonebox);
+        final EditText textBox = (EditText)findViewById(R.id.textbox);
+        final EditText repBox = (EditText)findViewById(R.id.repbox);
 
         Button buttonLoad = (Button)findViewById(R.id.start);
         buttonLoad.setOnClickListener(new View.OnClickListener(){
