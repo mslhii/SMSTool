@@ -18,7 +18,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    final public String CHARGING = "IMMA CHARGIN MA LAZER";
+    final public String CHARGING = "IMMA CHARGIN' MAH LAZER";
     final public String SHOOP = "SHOOP DA WHOOP";
 
     protected String mPhoneNumber;
@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
                 mProgressDialog = null;
             }
             mProgressDialog = new ProgressDialog(MainActivity.this);
-            mProgressDialog.setTitle("Firing lazers...");
+            mProgressDialog.setTitle("IMMA FIRIN' MAH LAZERS...");
             mProgressDialog.setMessage("0 lazers fired");
             mProgressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
             mProgressDialog.setCancelable(false);
@@ -123,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
             {
                 publishProgress(i);
                 mProgressDialog.setProgress(i);
-                Log.e("TEST", Integer.toString(i));
+                //Log.e("TEST", Integer.toString(i));
             }
             return null;
         }
