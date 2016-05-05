@@ -62,6 +62,10 @@ public class MainActivity extends AppCompatActivity {
                 else
                 {
                     String tempReps = repBox.getText().toString();
+                    if(tempReps == null) {
+                        tempReps = "0";
+                    }
+
                     mPhoneNumber = phoneBox.getText().toString();
                     mReps = Integer.parseInt(tempReps);
                     mTextContents = textBox.getText().toString();
