@@ -67,6 +67,9 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                     mPhoneNumber = phoneBox.getText().toString();
+                    if(mPhoneNumber == null) {
+                        mPhoneNumber = "";
+                    }
                     mReps = Integer.parseInt(tempReps);
                     mTextContents = textBox.getText().toString();
                     SMSTask task = new SMSTask();
