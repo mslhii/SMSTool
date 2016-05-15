@@ -72,6 +72,9 @@ public class MainActivity extends AppCompatActivity {
                     }
                     mReps = Integer.parseInt(tempReps);
                     mTextContents = textBox.getText().toString();
+                    if(mTextContents == null) {
+                        mTextContents = "";
+                    }
                     SMSTask task = new SMSTask();
                     task.execute();
                 }
