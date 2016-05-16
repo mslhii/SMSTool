@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.telephony.SmsManager;
 import android.text.Editable;
+import android.text.InputType;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
@@ -38,6 +39,28 @@ public class MainActivity extends AppCompatActivity {
         final EditText phoneBox = (EditText)findViewById(R.id.phonebox);
         final EditText textBox = (EditText)findViewById(R.id.textbox);
         final EditText repBox = (EditText)findViewById(R.id.repbox);
+
+        phoneBox.setInputType(InputType.TYPE_CLASS_PHONE);
+        repBox.setInputType(InputType.TYPE_CLASS_PHONE);
+
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(MainActivity.this);
+        alertDialogBuilder.setTitle("WARNING!!!");
+        alertDialogBuilder
+                .setMessage("This app is in ALPHA, so it may be unstable. Also I don't take any responsibility if you choose to use this app illegally. If you don't want to use this app press back, otherwise proceed with caution!")
+                .setCancelable(false)
+                .setPositiveButton("Agree",new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                })
+                .setNegativeButton("Back",new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                        finish();
+                    }
+                });
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        alertDialog.show();
 
         final Button buttonLoad = (Button)findViewById(R.id.start);
         buttonLoad.setOnClickListener(new View.OnClickListener(){
@@ -123,14 +146,21 @@ public class MainActivity extends AppCompatActivity {
             mProgressDialog.setIndeterminate(false);
             mProgressDialog.setMax(mReps);
             mProgressDialog.show();
+
+            // Slow down the dialog popup so the user knows something in the background is happening
+            // CAUTION
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
 
         @Override
         protected Void doInBackground(Void... arg0) {
-            //sendSMS();
-
             for (int i = 0; i < mReps; i++)
             {
+                sendSMS();
                 publishProgress(i);
                 mProgressDialog.setProgress(i);
                 //Log.e("TEST", Integer.toString(i));
@@ -150,6 +180,7 @@ public class MainActivity extends AppCompatActivity {
                 mProgressDialog.dismiss();
                 mProgressDialog = null;
             }
+            Toast.makeText(MainActivity.this, Integer.toString(mReps) + " lazers successfully fired!", Toast.LENGTH_SHORT).show();
         }
 
         private boolean sendSMS(){
@@ -157,7 +188,8 @@ public class MainActivity extends AppCompatActivity {
                 SmsManager smsManager = SmsManager.getDefault();
                 smsManager.sendTextMessage(mPhoneNumber, null, mTextContents, null, null);
             } catch (Exception e) {
-                Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
+                Log.e("TAG", e.getMessage());
                 e.printStackTrace();
             }
 
