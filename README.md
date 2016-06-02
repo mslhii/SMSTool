@@ -1,3 +1,3 @@
 # SMSTool
-Tool for sending lots of SMSes at once
+Tool for sending lots of SMSes at once. 
 
