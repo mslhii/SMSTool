@@ -160,7 +160,7 @@ public class MainActivity extends AppCompatActivity {
         protected Void doInBackground(Void... arg0) {
             for (int i = 0; i < mReps; i++)
             {
-                sendSMS();
+                //sendSMS();
                 publishProgress(i);
                 mProgressDialog.setProgress(i);
                 //Log.e("TEST", Integer.toString(i));
