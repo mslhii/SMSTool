@@ -19,7 +19,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    final public String CHARGING = "IMMA CHARGIN' MAH LAZER";
+    final public String CHARGING = "IMMA CHARGIN MAH LAZER";
     final public String SHOOP = "SHOOP DA WHOOP";
 
     protected String mPhoneNumber;
@@ -88,6 +88,9 @@ public class MainActivity extends AppCompatActivity {
                     if(tempReps == null) {
                         tempReps = "0";
                     }
+                    if(tempReps.equals("")) {
+                        tempReps = "0";
+                    }
 
                     mPhoneNumber = phoneBox.getText().toString();
                     if(mPhoneNumber == null) {
@@ -99,7 +102,23 @@ public class MainActivity extends AppCompatActivity {
                         mTextContents = "";
                     }
                     SMSTask task = new SMSTask();
-                    task.execute();
+
+                    // Safeguards to make sure we don't misfire
+                    if(mPhoneNumber.equals(""))
+                    {
+                        Toast.makeText(MainActivity.this, "You haven't entered a phone number!", Toast.LENGTH_LONG).show();
+                    }
+                    else if(mTextContents.equals(""))
+                    {
+                        Toast.makeText(MainActivity.this, "Your lazer contents is empty!", Toast.LENGTH_LONG).show();
+                    }
+                    else if(mReps == 0)
+                    {
+                        Toast.makeText(MainActivity.this, "You haven't set your number of lazers to fire!", Toast.LENGTH_LONG).show();
+                    }
+                    else {
+                        task.execute();
+                    }
                 }
             }});
 
