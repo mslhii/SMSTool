@@ -202,6 +202,10 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(MainActivity.this, Integer.toString(mReps) + " lazers successfully fired!", Toast.LENGTH_SHORT).show();
         }
 
+        /**
+         *
+         * @return
+         */
         private boolean sendSMS(){
             try {
                 SmsManager smsManager = SmsManager.getDefault();
