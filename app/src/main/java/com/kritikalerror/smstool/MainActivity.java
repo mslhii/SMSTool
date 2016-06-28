@@ -211,7 +211,6 @@ public class MainActivity extends AppCompatActivity {
                 SmsManager smsManager = SmsManager.getDefault();
                 smsManager.sendTextMessage(mPhoneNumber, null, mTextContents, null, null);
             } catch (Exception e) {
-                //Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
                 Log.e("TAG", e.getMessage());
                 e.printStackTrace();
             }
