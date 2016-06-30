@@ -203,7 +203,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         /**
-         *
+         * Main function to send SMS
          * @return
          */
         private boolean sendSMS(){
