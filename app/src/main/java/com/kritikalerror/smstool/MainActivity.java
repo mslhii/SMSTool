@@ -166,7 +166,7 @@ public class MainActivity extends AppCompatActivity {
             mProgressDialog.show();
 
             // Slow down the dialog popup so the user knows something in the background is happening
-            // CAUTION
+            // CAUTION with thread sleeps
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
