@@ -30,5 +30,7 @@ public class SplashActivity extends AppCompatActivity {
                 });
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
+
+        // Handle permissions issue here
     }
 }
