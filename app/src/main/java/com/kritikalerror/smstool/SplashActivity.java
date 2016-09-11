@@ -35,6 +35,7 @@ public class SplashActivity extends AppCompatActivity {
         //initializeWrapper();
     }
 
+    //
 //    private boolean initializeWrapper() {
 //        int hasCameraPermission = ContextCompat.checkSelfPermission(SplashActivity.this,
 //                Manifest.permission.CAMERA);
