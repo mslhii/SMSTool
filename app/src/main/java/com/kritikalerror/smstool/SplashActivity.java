@@ -1,6 +1,7 @@
 package com.kritikalerror.smstool;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -33,6 +34,9 @@ public class SplashActivity extends AppCompatActivity {
 
         // Handle permissions issue here
         //initializeWrapper();
+
+        Intent myIntent = new Intent(this, MainActivity.class);
+        startActivity(myIntent);
     }
 
     //
