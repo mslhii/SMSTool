@@ -35,6 +35,7 @@ public class SplashActivity extends AppCompatActivity {
         // Handle permissions issue here
         //initializeWrapper();
 
+        // Transition to new Activity
         Intent myIntent = new Intent(this, MainActivity.class);
         startActivity(myIntent);
     }
