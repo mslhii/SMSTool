@@ -21,6 +21,9 @@ public class SplashActivity extends AppCompatActivity {
                 .setPositiveButton("Agree",new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         dialog.cancel();
+
+                        Intent myIntent = new Intent(getApplicationContext(), MainActivity.class);
+                        startActivity(myIntent);
                     }
                 })
                 .setNegativeButton("Back",new DialogInterface.OnClickListener() {
@@ -34,10 +37,6 @@ public class SplashActivity extends AppCompatActivity {
 
         // Handle permissions issue here
         //initializeWrapper();
-
-        // Transition to new Activity
-        Intent myIntent = new Intent(this, MainActivity.class);
-        startActivity(myIntent);
     }
 
     //
