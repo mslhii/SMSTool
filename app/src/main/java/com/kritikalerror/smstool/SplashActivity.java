@@ -13,6 +13,9 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
+        // Handle permissions issue here
+        //initializeWrapper();
+
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(SplashActivity.this);
         alertDialogBuilder.setTitle("WARNING!!!");
         alertDialogBuilder
@@ -34,9 +37,6 @@ public class SplashActivity extends AppCompatActivity {
                 });
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
-
-        // Handle permissions issue here
-        //initializeWrapper();
     }
 
     //
