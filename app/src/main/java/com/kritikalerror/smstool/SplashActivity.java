@@ -72,21 +72,21 @@ public class SplashActivity extends AppCompatActivity {
                         });
             }
             ActivityCompat.requestPermissions(SplashActivity.this,
-                    new String[] {Manifest.permission.CAMERA},
+                    new String[] {Manifest.permission.SEND_SMS},
                     REQUEST_CODE_ASK_PERMISSIONS);
         }
 
         int hasWriteStoragePermission = ContextCompat.checkSelfPermission(SplashActivity.this,
-                Manifest.permission.WRITE_EXTERNAL_STORAGE);
+                Manifest.permission.READ_CONTACTS);
         if (hasWriteStoragePermission != PackageManager.PERMISSION_GRANTED) {
             if (!ActivityCompat.shouldShowRequestPermissionRationale(SplashActivity.this,
-                    Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+                    Manifest.permission.READ_CONTACTS)) {
                 showOKAlertMessage("You need to allow access to external storage to save photos for the app to function properly",
                         new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 ActivityCompat.requestPermissions(SplashActivity.this,
-                                        new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                                        new String[]{Manifest.permission.READ_CONTACTS},
                                         REQUEST_CODE_ASK_PERMISSIONS);
                             }
                         });
