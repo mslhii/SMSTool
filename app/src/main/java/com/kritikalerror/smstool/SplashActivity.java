@@ -20,7 +20,7 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
 
         // Handle permissions issue here
-        //initializeWrapper();
+        initializeWrapper();
 
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(SplashActivity.this);
         alertDialogBuilder.setTitle("WARNING!!!");
