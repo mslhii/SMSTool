@@ -22,6 +22,7 @@ public class SplashActivity extends AppCompatActivity {
         // Handle permissions issue here
         initializeWrapper();
 
+        // Turn into background?
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(SplashActivity.this);
         alertDialogBuilder.setTitle("WARNING!!!");
         alertDialogBuilder
