@@ -12,7 +12,7 @@ import android.os.Bundle;
 
 public class SplashActivity extends AppCompatActivity {
 
-    private int REQUEST_CODE_ASK_PERMISSIONS = 9999;
+    private int REQUEST_CODE_ASK_PERMISSIONS = 99;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,8 +42,8 @@ public class SplashActivity extends AppCompatActivity {
                         finish();
                     }
                 });
-        AlertDialog alertDialog = alertDialogBuilder.create();
-        alertDialog.show();
+        //AlertDialog alertDialog = alertDialogBuilder.create();
+        //alertDialog.show();
     }
 
     private void showOKAlertMessage(String message, DialogInterface.OnClickListener okListener) {
