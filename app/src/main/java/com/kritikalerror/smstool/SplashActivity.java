@@ -9,10 +9,14 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 public class SplashActivity extends AppCompatActivity {
 
     private int REQUEST_CODE_ASK_PERMISSIONS = 99;
+    private Button proceedButton;
+    private Button quitButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +48,28 @@ public class SplashActivity extends AppCompatActivity {
                 });
         //AlertDialog alertDialog = alertDialogBuilder.create();
         //alertDialog.show();
+    }
+
+    public void proceedButton() {
+        proceedButton = (Button) findViewById(R.id.proceed);
+        proceedButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent proceedIntent = new Intent(SplashActivity.this, MainActivity.class);;
+                startActivity(proceedIntent);
+            }
+        });
+    }
+
+    public void quitButton() {
+        quitButton = (Button) findViewById(R.id.quit);
+        quitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent proceedIntent = new Intent(SplashActivity.this, MainActivity.class);;
+                startActivity(proceedIntent);
+            }
+        });
     }
 
     private void showOKAlertMessage(String message, DialogInterface.OnClickListener okListener) {
