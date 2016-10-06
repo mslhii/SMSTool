@@ -23,6 +23,9 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
+        proceedButton();
+        quitButton();
+
         // Handle permissions issue here
         initializeWrapper();
 
