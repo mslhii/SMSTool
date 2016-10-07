@@ -49,8 +49,6 @@ public class SplashActivity extends AppCompatActivity {
                         finish();
                     }
                 });
-        //AlertDialog alertDialog = alertDialogBuilder.create();
-        //alertDialog.show();
     }
 
     public void proceedButton() {
