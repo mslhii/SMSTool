@@ -26,7 +26,7 @@ public class SplashActivity extends AppCompatActivity {
         quitButton();
 
         // Handle permissions issue here
-        initializeWrapper();
+        //initializeWrapper();
     }
 
     public void proceedButton() {
@@ -61,7 +61,7 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     //
-    private boolean initializeWrapper() {
+    private boolean initializeWrapperDeprecated() {
         int hasCameraPermission = ContextCompat.checkSelfPermission(SplashActivity.this,
                 Manifest.permission.SEND_SMS);
         if (hasCameraPermission != PackageManager.PERMISSION_GRANTED) {
