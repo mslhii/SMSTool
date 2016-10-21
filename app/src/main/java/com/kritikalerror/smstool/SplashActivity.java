@@ -107,46 +107,46 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     //
-    private boolean initializeWrapperDeprecated() {
-        int hasCameraPermission = ContextCompat.checkSelfPermission(SplashActivity.this,
-                Manifest.permission.SEND_SMS);
-        if (hasCameraPermission != PackageManager.PERMISSION_GRANTED) {
-            if (!ActivityCompat.shouldShowRequestPermissionRationale(SplashActivity.this,
-                    Manifest.permission.SEND_SMS)) {
-                showOKAlertMessage("You need to allow app to use the camera for the app to function properly",
-                        new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                ActivityCompat.requestPermissions(SplashActivity.this,
-                                        new String[]{Manifest.permission.SEND_SMS},
-                                        REQUEST_CODE_ASK_PERMISSIONS);
-                            }
-                        });
-            }
-            ActivityCompat.requestPermissions(SplashActivity.this,
-                    new String[] {Manifest.permission.SEND_SMS},
-                    REQUEST_CODE_ASK_PERMISSIONS);
-        }
-
-        int hasWriteStoragePermission = ContextCompat.checkSelfPermission(SplashActivity.this,
-                Manifest.permission.READ_CONTACTS);
-        if (hasWriteStoragePermission != PackageManager.PERMISSION_GRANTED) {
-            if (!ActivityCompat.shouldShowRequestPermissionRationale(SplashActivity.this,
-                    Manifest.permission.READ_CONTACTS)) {
-                showOKAlertMessage("You need to allow access to external storage to save photos for the app to function properly",
-                        new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                ActivityCompat.requestPermissions(SplashActivity.this,
-                                        new String[]{Manifest.permission.READ_CONTACTS},
-                                        REQUEST_CODE_ASK_PERMISSIONS);
-                            }
-                        });
-            }
-            ActivityCompat.requestPermissions(SplashActivity.this,
-                    new String[] {Manifest.permission.READ_CONTACTS},
-                    REQUEST_CODE_ASK_PERMISSIONS);
-        }
-        return true;
-    }
+//    private boolean initializeWrapperDeprecated() {
+//        int hasCameraPermission = ContextCompat.checkSelfPermission(SplashActivity.this,
+//                Manifest.permission.SEND_SMS);
+//        if (hasCameraPermission != PackageManager.PERMISSION_GRANTED) {
+//            if (!ActivityCompat.shouldShowRequestPermissionRationale(SplashActivity.this,
+//                    Manifest.permission.SEND_SMS)) {
+//                showOKAlertMessage("You need to allow app to use the camera for the app to function properly",
+//                        new DialogInterface.OnClickListener() {
+//                            @Override
+//                            public void onClick(DialogInterface dialog, int which) {
+//                                ActivityCompat.requestPermissions(SplashActivity.this,
+//                                        new String[]{Manifest.permission.SEND_SMS},
+//                                        REQUEST_CODE_ASK_PERMISSIONS);
+//                            }
+//                        });
+//            }
+//            ActivityCompat.requestPermissions(SplashActivity.this,
+//                    new String[] {Manifest.permission.SEND_SMS},
+//                    REQUEST_CODE_ASK_PERMISSIONS);
+//        }
+//
+//        int hasWriteStoragePermission = ContextCompat.checkSelfPermission(SplashActivity.this,
+//                Manifest.permission.READ_CONTACTS);
+//        if (hasWriteStoragePermission != PackageManager.PERMISSION_GRANTED) {
+//            if (!ActivityCompat.shouldShowRequestPermissionRationale(SplashActivity.this,
+//                    Manifest.permission.READ_CONTACTS)) {
+//                showOKAlertMessage("You need to allow access to external storage to save photos for the app to function properly",
+//                        new DialogInterface.OnClickListener() {
+//                            @Override
+//                            public void onClick(DialogInterface dialog, int which) {
+//                                ActivityCompat.requestPermissions(SplashActivity.this,
+//                                        new String[]{Manifest.permission.READ_CONTACTS},
+//                                        REQUEST_CODE_ASK_PERMISSIONS);
+//                            }
+//                        });
+//            }
+//            ActivityCompat.requestPermissions(SplashActivity.this,
+//                    new String[] {Manifest.permission.READ_CONTACTS},
+//                    REQUEST_CODE_ASK_PERMISSIONS);
+//        }
+//        return true;
+//    }
 }
