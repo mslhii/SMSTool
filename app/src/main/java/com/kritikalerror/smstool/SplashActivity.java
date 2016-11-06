@@ -16,7 +16,6 @@ import java.util.List;
 
 public class SplashActivity extends AppCompatActivity {
 
-    //private int REQUEST_CODE_ASK_PERMISSIONS = 99;
     private final int REQUEST_CODE_ASK_MULTIPLE_PERMISSIONS = 124;
     private Button proceedButton;
     private Button quitButton;
