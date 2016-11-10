@@ -1,5 +1,5 @@
 # SMSTool
 Tool for sending lots of SMSes at once. WIP
 
-Tasks:
+Tasks: <p/>
 UI
