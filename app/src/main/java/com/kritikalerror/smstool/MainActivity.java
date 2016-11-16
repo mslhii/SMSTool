@@ -164,7 +164,7 @@ public class MainActivity extends AppCompatActivity {
                 //sendSMS();
                 publishProgress(i);
                 mProgressDialog.setProgress(i);
-                //Log.e("TEST", Integer.toString(i));
+                //Log.e("ASYNC", Integer.toString(i));
             }
             return null;
         }
