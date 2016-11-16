@@ -157,6 +157,8 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected Void doInBackground(Void... arg0) {
+            // Find way to stop thread
+
             for (int i = 0; i < mReps; i++)
             {
                 //sendSMS();
