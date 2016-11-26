@@ -161,7 +161,7 @@ public class MainActivity extends AppCompatActivity {
 
             for (int i = 0; i < mReps; i++)
             {
-                //sendSMS();
+                //sendSMS();  // Unlock
                 publishProgress(i);
                 mProgressDialog.setProgress(i);
                 //Log.e("ASYNC", Integer.toString(i));
