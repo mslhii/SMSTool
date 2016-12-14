@@ -47,9 +47,7 @@ public class SplashActivity extends AppCompatActivity {
         quitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
-                finish();
-//                startActivity(proceedIntent);
-            }
+                finish();}
         });
     }
 
