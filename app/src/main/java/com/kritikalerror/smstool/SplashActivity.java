@@ -52,7 +52,7 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     /**
-    Show alert
+    Show alert to
      */
     private void showOKAlertMessage(String message, DialogInterface.OnClickListener okListener) {
         new android.support.v7.app.AlertDialog.Builder(SplashActivity.this)
