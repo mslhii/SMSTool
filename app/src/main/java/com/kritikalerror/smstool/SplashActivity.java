@@ -64,7 +64,7 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     /**
-    Wrapper for u
+    Wrapper for us
      */
     private boolean initializeWrapper() {
         List<String> permissionsNeeded = new ArrayList<String>();
