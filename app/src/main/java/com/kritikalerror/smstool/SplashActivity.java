@@ -98,6 +98,12 @@ public class SplashActivity extends AppCompatActivity {
         return true;
     }
 
+    /**
+     *
+     * @param permissionsList
+     * @param permission
+     * @return
+     */
     private boolean addPermission(List<String> permissionsList, String permission) {
         if (ActivityCompat.checkSelfPermission(getApplicationContext(), permission) != PackageManager.PERMISSION_GRANTED) {
             permissionsList.add(permission);
