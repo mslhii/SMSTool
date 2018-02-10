@@ -100,7 +100,7 @@ public class SplashActivity extends AppCompatActivity {
 
     /**
      * Ask user for more permissions
-     * Permissions are for use
+     * Permissions are for user
      * @param permissionsList
      * @param permission
      * @return
