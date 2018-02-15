@@ -8,5 +8,5 @@ UI <p/>
 Test <p/>
 
 1. Debug
-2. Relea
+2. Releas
 
