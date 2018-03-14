@@ -8,6 +8,6 @@ UI <p/>
 Test <p/>
 
 1. Debug
-2. Testing f
+2. Testing fo
 2. Release
 
