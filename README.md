@@ -8,6 +8,6 @@ UI <p/>
 Test <p/>
 
 1. Debug
-2. Testing for users and be testers
+2. Testing for users and bet testers
 2. Release
 
