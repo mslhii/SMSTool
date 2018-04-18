@@ -1,7 +1,7 @@
 # SMSTool
 Tool for sending lots of SMSes at once. WIP
 
-Beta 
+CBeta 
 
 Tasks: <p/>
 UI <p/>
