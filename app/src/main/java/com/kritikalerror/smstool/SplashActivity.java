@@ -108,7 +108,7 @@ public class SplashActivity extends AppCompatActivity {
     private boolean addPermission(List<String> permissionsList, String permission) {
         if (ActivityCompat.checkSelfPermission(getApplicationContext(), permission) != PackageManager.PERMISSION_GRANTED) {
             permissionsList.add(permission);
-            // Check for Rationale ption
+            // Check for Rationale option
             if (!ActivityCompat.shouldShowRequestPermissionRationale(SplashActivity.this, permission))
                 return false;
         }
