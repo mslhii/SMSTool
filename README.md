@@ -1,13 +1,13 @@
 # SMSTool
 Tool for sending lots of SMSes at once. WIP
 
-Beta
+CurrBeta 
 
 Tasks: <p/>
 UI <p/>
 Test <p/>
 
 1. Debug
-2. Testing for users a
-2. Release
+2. Testing for users and beta testers
+2. Release 
 
