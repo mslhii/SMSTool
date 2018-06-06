@@ -9,5 +9,5 @@ Test <p/>
 
 1. Debug
 2. Testing for users and beta testers
-2. Release t
+2. Release to
 
