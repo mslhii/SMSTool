@@ -6,7 +6,7 @@ Current Status: In beta
 Tasks: <p/>
 UI <p/>
 Test <p/>
-Email
+Email 
 
 1. Debug
 2. Testing for users and beta testers
