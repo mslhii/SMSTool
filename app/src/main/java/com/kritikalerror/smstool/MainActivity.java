@@ -126,6 +126,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /*
+
+     */
     public class SMSTask extends AsyncTask<Void, Integer, Void> {
         ProgressDialog mProgressDialog;
 
