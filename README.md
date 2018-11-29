@@ -6,7 +6,7 @@ Current Status: In beta
 Tasks: <p/>
 UI <p/>
 Test <p/>
-Emailer to the user(s) for "SMS messages" sen
+Emailer to the user(s) for "SMS messages" send
 
 1. Debug
 2. Testing for users and beta testers
