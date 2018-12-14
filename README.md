@@ -1,5 +1,5 @@
 # SMSTool
-Tool for sending lots of SMSes at once. WoIP
+Tool for sending lots of SMSes at once. WorIP
 
 Current Status: In beta 
 
