@@ -1,5 +1,5 @@
 # SMSTool
-Tool for sending lots of SMSes at once. Work InP
+Tool for sending lots of SMSes at once. Work In P
 
 Current Status: In beta 
 
