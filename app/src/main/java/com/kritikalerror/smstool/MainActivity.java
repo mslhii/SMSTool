@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /*
-    Core met
+    Core meth
      */
     public class SMSTask extends AsyncTask<Void, Integer, Void> {
         ProgressDialog mProgressDialog;
