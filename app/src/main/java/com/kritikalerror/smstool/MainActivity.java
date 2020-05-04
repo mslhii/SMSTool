@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /*
-    Core method to display the sm
+    Core method to display the sms
      */
     public class SMSTask extends AsyncTask<Void, Integer, Void> {
         ProgressDialog mProgressDialog;
